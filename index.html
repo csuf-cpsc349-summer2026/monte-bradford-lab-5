@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPSC-349 Lab 5: Movies Portal</title>
+    <title>CPSC-349 Lab 5: Movie Details</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -20,7 +20,7 @@
     <header>
         <div class="container">
             <h1>Movies Portal</h1>
-            <p>Welcome to the Movies Portal. Explore movies, genres, ratings, and reviews.</p>
+            <p>View details, reviews, and rating information for a selected movie.</p>
         </div>
     </header>
 
@@ -38,38 +38,59 @@
     <main class="container">
 
         <!-- section: Groups related content together into distinct thematic regions of a page -->
-        <section id="featured" class="section">
-            <h2>Featured Movies</h2>
+        <section id="movie-info" class="section">
+            <h2 id="movie-title">Movie Details</h2>
 
-            <div class="movie-grid">
+            <div class="details-layout">
+                <img id="movie-image" src="" alt="">
 
-                <!-- article: Defines a self-contained, independent composition like a card, post, or article -->
-                <article class="movie-card">
-                    <h3>The Boys</h3>
-                    <img src="images/the_boys.jpg" alt="The Boys poster" width="200">
-                    <p>A fun and irreverent take on what happens when superheroes abuse their superpowers.</p>
-                    <p><strong>Rating:</strong> 8.7/10</p>
-                    <a class="btn" href="details.html?movie=the-boys">View Details</a>
-                </article>
-
-                <article class="movie-card">
-                    <h3>Superman</h3>
-                    <img src="images/superman.jpeg" alt="Superman movie poster" width="200">
-                    <p>An upcoming superhero movie following Superman's journey to reconcile his Kryptonian heritage.
-                    </p>
-                    <p><strong>Rating:</strong> 8.5/10</p>
-                    <a class="btn" href="details.html?movie=superman">View Details</a>
-                </article>
-
-                <article class="movie-card">
-                    <h3>Avatar: Fire and Ash</h3>
-                    <img src="images/avatar_fire_and_ash.jpeg" alt="Avatar: Fire and Ash movie poster" width="200">
-                    <p>The next chapter in the Avatar franchise exploring the new ash people of Pandora.</p>
-                    <p><strong>Rating:</strong> 8.9/10</p>
-                    <a class="btn" href="details.html?movie=avatar-fire-and-ash">View Details</a>
-                </article>
+                <div>
+                    <p id="movie-description"></p>
+                    <p><strong>Genre:</strong> <span id="movie-genre"></span></p>
+                    <p><strong>Year:</strong> <span id="movie-year"></span></p>
+                    <p><strong>Rating:</strong> <span id="movie-rating"></span></p>
+                </div>
             </div>
         </section>
+
+        <!-- TODO: Add review rendering section here -->
+        <section id="reviews" class="section">
+            <h2>Reviews</h2>
+            <div id="reviews-list"></div>
+        </section>
+
+        <!-- TODO: Add Leave a Review section here -->
+        <section id="leave-review" class="section">
+            <h2>Leave a Review</h2>
+
+            <form id="review-form">
+                <p>
+                    <label for="review-name">Name</label>
+                    <input type="text" id="review-name" name="review-name" required>
+                </p>
+
+                <p>
+                    <label for="review-rating">Rating</label>
+                    <select id="review-rating" name="review-rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="review-text">Review</label>
+                    <textarea id="review-text" name="review-text" required></textarea>
+                </p>
+
+                <input class="btn" type="submit" value="Submit Review">
+            </form>
+        </section>
+
+        <a class="btn" href="index.html">Back to Featured Movies</a>
 
     </main>
 
@@ -78,6 +99,8 @@
         <p>&copy; 2026 Movies Portal</p>
         <p>Contact us at <a href="mailto:movies@example.com">movies@cspc349.com</a></p>
     </footer>
+
+    <script src="js/app.js"></script>
 
 </body>
 

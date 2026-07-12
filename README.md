@@ -214,3 +214,11 @@ Students must submit:
 2. Review section rendered from JavaScript data
 3. Leave a Review form that temporarily adds a new review to the current page render
 4. Screenshots showing the three details page states and the Contact Us form before and after submitting
+
+## SCREENSHOTS
+
+![Contact Form Before Submit](images/contactbefore.png)
+![Contact Form Before Submit](images/contactafter.png)
+![Contact Form Before Submit](images/reviewtheboys.png)
+![Contact Form Before Submit](images/reviewsuperman.png)
+![Contact Form Before Submit](images/reviewavatar.png)

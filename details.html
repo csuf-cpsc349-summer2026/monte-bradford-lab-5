@@ -51,40 +51,40 @@
             </div>
         </section>
 
-        <!-- section: Groups related content together into distinct thematic regions of a page -->
-        <section class="section">
+        <!-- TODO: Add review rendering section here -->
+        <section id="reviews" class="section">
             <h2>Reviews</h2>
             <div id="reviews-list"></div>
         </section>
 
-        <!-- section: Groups related content together into distinct thematic regions of a page -->
-        <section class="section">
+        <!-- TODO: Add Leave a Review section here -->
+        <section id="leave-review" class="section">
             <h2>Leave a Review</h2>
 
             <form id="review-form">
-                <div class="form-group">
+                <p>
                     <label for="review-name">Name</label>
                     <input type="text" id="review-name" name="review-name" required>
-                </div>
+                </p>
 
-                <div class="form-group">
+                <p>
                     <label for="review-rating">Rating</label>
                     <select id="review-rating" name="review-rating" required>
                         <option value="">Select a rating</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
                     </select>
-                </div>
+                </p>
 
-                <div class="form-group">
+                <p>
                     <label for="review-text">Review</label>
-                    <textarea id="review-text" name="review-text" rows="5" required></textarea>
-                </div>
+                    <textarea id="review-text" name="review-text" required></textarea>
+                </p>
 
-                <button class="btn" type="submit">Submit Review</button>
+                <input class="btn" type="submit" value="Submit Review">
             </form>
         </section>
 
